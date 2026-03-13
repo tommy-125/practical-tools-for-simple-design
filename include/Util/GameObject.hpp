@@ -132,6 +132,10 @@ public:
      */
     void SetVisible(const bool visible) { m_Visible = visible; }
 
+    float GetAlpha() const { return m_Alpha; }
+
+    void SetAlpha(const float alpha) { m_Alpha = alpha; }
+
     /**
      * @brief Add a child to the game object.
      *
@@ -161,6 +165,7 @@ protected:
     float m_ZIndex = 0;
     bool m_Visible = true;
     glm::vec2 m_Pivot = {0, 0};
+    float m_Alpha = 1.0F;
 };
 } // namespace Util
 #endif

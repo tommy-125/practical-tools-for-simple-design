@@ -65,6 +65,9 @@ void Image::UseAntiAliasing(bool useAA) {
 void Image::Draw(const Core::Matrices &data) {
     m_UniformBuffer->SetData(0, data);
 
+    GLint alphaLocation = glGetUniformLocation(s_Program->GetId(), "alpha");
+    glUniform1f(alphaLocation, data.m_Alpha);
+
     m_Texture->Bind(UNIFORM_SURFACE_LOCATION);
     s_Program->Bind();
     s_Program->Validate();

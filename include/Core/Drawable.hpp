@@ -9,6 +9,7 @@ namespace Core {
 struct Matrices {
     glm::mat4 m_Model;
     glm::mat4 m_Projection;
+    float m_Alpha = 1.0F;
 };
 
 class Drawable {

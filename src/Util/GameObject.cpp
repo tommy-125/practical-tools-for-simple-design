@@ -14,6 +14,7 @@ void GameObject::Draw() {
     data.m_Model = glm::translate(
         data.m_Model, glm::vec3{m_Pivot / m_Drawable->GetSize(), 0} * -1.0F);
 
+    data.m_Alpha = m_Alpha;
     m_Drawable->Draw(data);
 }
 
